@@ -1,0 +1,9 @@
+mat-toolbar {
+    justify-content: space-between;
+    background: #1976d2; 
+    color: white;
+}
+
+.container {
+    position: relative;
+}

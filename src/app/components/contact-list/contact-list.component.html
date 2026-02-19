@@ -1,0 +1,23 @@
+<div class="container">
+  <mat-list>
+    <mat-list-item *ngFor="let contact of (contactResource.value() ?? [])">
+      <h3 matListItemTitle>{{ contact.name }}</h3>
+      <p matListItemLine>{{ contact.email }}</p>
+
+      <div matListItemMeta>
+        <button mat-icon-button routerLink="/edit/{{ contact.id }}">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deleteContact(contact.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-progress-spinner
+    *ngIf="loading()"
+    mode="indeterminate"
+    [diameter]="50"
+  ></mat-progress-spinner>
+</div>

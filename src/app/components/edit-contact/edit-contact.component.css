@@ -1,0 +1,16 @@
+:host {
+    padding: 16px;
+    display: block;
+}
+
+.field {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+}
